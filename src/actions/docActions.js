@@ -7,6 +7,10 @@ import {
 import axios from 'axios';
 import config from '../config';
 
+/* 
+  Payloads to send data to the store
+*/
+
 /* List All Doctors */
 export const getDoctors = () => async dispatch => {
   const docRes = await axios.get(`${config.url}/reference/getDoctors`);
@@ -40,7 +44,6 @@ export const getDocInfo = doctor_id => async dispatch => {
 };
 
 /* Get All Tasks */
-
 export const getTasks = () => async dispatch => {
   const taskRes = await axios.get(`${config.url}/tasks/getTasks`);
   dispatch({

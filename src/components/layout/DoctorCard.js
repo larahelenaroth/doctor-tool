@@ -9,17 +9,21 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 
+/* 
+  Cards for each doctor under the home page 
+    * id
+    * first & last name
+    * degree
+    * date of birth
+    * link to view tasks for the specific doctor
+*/
+
 const DoctorCard = props => {
   const { doctor } = props;
   const useStyles = makeStyles(theme => ({
     card: {
       minWidth: 275,
       margin: '2px 0'
-    },
-    bullet: {
-      display: 'inline-block',
-      margin: '0 2px',
-      transform: 'scale(0.8)'
     },
     title: {
       fontSize: 14
@@ -51,7 +55,7 @@ const DoctorCard = props => {
       </CardContent>
       <CardActions>
         <Link to={`/doctor/${doctor.doctor_id}`}>
-          <Button size="small" style={{ cursor: 'pointer' }}>
+          <Button size="small" variant="contained" color="secondary">
             View Tasks
           </Button>
         </Link>

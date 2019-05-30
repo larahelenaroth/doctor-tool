@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 /* 
-  Purpose of Component: User enters URL that does not exist - show not found
+  If URL entered does not exist - show not found
 */
 
 function NotFound() {

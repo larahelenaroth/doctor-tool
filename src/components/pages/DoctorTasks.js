@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 // ACTIONS
 import { getDocInfo } from '../../actions/docActions';
-// COMPONENTS
-
 //CSS
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -18,6 +16,19 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Checkbox from '@material-ui/core/Checkbox';
 
+/* 
+  Display doctor information:
+    * ID
+    * First & Last Name
+    * DOB
+    * Degree
+  Add task capability
+  View Tasks for provider (Assuming sorted by priority):
+    * Priority
+    * Task ID (thought name)
+    * Checkbox
+*/
+
 class DoctorTasks extends Component {
   componentDidMount() {
     const { doctor_id } = this.props.match.params;
@@ -30,7 +41,6 @@ class DoctorTasks extends Component {
       backgroundColor: theme.palette.background.paper
     }
   }));
-  handleToggle = (task_id, e) => {};
   render() {
     const classes = this.useStyles;
     const { viewDoctor } = this.props;
@@ -45,6 +55,9 @@ class DoctorTasks extends Component {
         </Typography>
         <Typography variant="h5" component="h2">
           {viewDoctor.info.first_name} {viewDoctor.info.last_name}
+        </Typography>
+        <Typography className={classes.pos} color="textSecondary">
+          {viewDoctor.info.dob}
         </Typography>
         <Typography className={classes.pos} color="textSecondary" gutterBottom>
           {viewDoctor.info.degree}

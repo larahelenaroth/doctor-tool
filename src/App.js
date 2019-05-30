@@ -14,20 +14,27 @@ import DoctorTasks from './components/pages/DoctorTasks';
 //CSS
 import './App.css';
 
+/* 
+  Provider, Store, Routes
+  Combines all work into one
+*/
+
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
         <Router>
           <Header />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/add-provider" component={AddProvider} />
-            <Route exact path="/task-list" component={TaskList} />
-            <Route exact path="/doctor/:doctor_id" component={DoctorTasks} />
-            <Route exact path="/about" component={About} />
-            <Route component={NotFound} />
-          </Switch>
+          <div style={{ marginTop: '75px' }}>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/add-provider" component={AddProvider} />
+              <Route exact path="/task-list" component={TaskList} />
+              <Route exact path="/doctor/:doctor_id" component={DoctorTasks} />
+              <Route exact path="/about" component={About} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
         </Router>
       </Provider>
     );

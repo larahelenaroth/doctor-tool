@@ -12,7 +12,7 @@ import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
 
 /* 
-  Purpose of Component:
+  View all doctors with search functionality
 */
 
 class Search extends Component {

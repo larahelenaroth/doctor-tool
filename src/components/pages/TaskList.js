@@ -13,6 +13,14 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
+/* 
+  View all tasks for all doctors (Assuming sorted by owner, priority)
+    * Task
+    * Task ID
+    * Owner
+    * Priority
+*/
+
 class TaskList extends Component {
   useStyles = makeStyles(theme => ({
     root: {

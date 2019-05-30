@@ -3,13 +3,29 @@ import React from 'react';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 
+/* 
+  About the developer aka me :)
+    * Background & Education
+    * Professional Experience
+      * College
+      * SKIM
+      * Fitch Ratings
+      * L'Oréal
+    * Personal
+*/
+
 const About = () => {
   return (
     <Container style={{ margin: '5% 0 20% 0' }}>
       <Typography variant="h5" component="h2" gutterBottom>
-        About
+        About Lara H Roth
       </Typography>
-      <h6 className="">{`Background & Education`}</h6>
+      <img
+        src="../../me.jpg"
+        alt="me"
+        style={{ maxWidth: '100%', height: 'auto' }}
+      />
+      <h6 style={{ marginTop: '5px' }}>{`Background & Education`}</h6>
       <p className="">
         I was born in San Francisco, CA and raised between Canada, Minneapolis,
         and New York. After graduating high school, I moved to Canada to pursue

@@ -5,6 +5,10 @@ import {
   GET_TASK_INFO
 } from '../actions/types';
 
+/* 
+  State change in response to actions sent to store
+*/
+
 const initialState = {
   doctors: [],
   masterDoctors: [],
